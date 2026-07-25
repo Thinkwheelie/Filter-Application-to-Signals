@@ -38,14 +38,16 @@ FM Demodulation
    │
    ▼
 Baseband Filtering
- ┌──────────────┐
- │              │
- ▼              ▼
-FIR Filter    IIR Filter
- │              │
- └──────┬───────┘
-        ▼
- Wiener Denoising
+         |
+         |
+         ▼
+ ┌──────────────┐                      ▼
+ |              |               Wiener Denoising
+ │              │                      |
+ ▼              ▼                      |
+FIR Filter    IIR Filter               |
+ │              │                      |
+ └──────┬───────┘                        
         │
         ▼
  STFT Analysis
